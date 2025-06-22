@@ -14,6 +14,23 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" class="h-12" alt="Logo">
     </div>
 
+    <div class="mt-28">
+      <h2 class="text-3xl font-bold text-gray-700 text-center mb-6">Create Your Account</h2>
+
+      <?php if (!empty($errors)): ?>
+        <div class="bg-red-100 border border-red-400 text-red-700 p-4 rounded mb-4">
+          <ul class="list-disc list-inside">
+            <?php foreach ($errors as $e) echo "<li>$e</li>"; ?>
+          </ul>
+        </div>
+      <?php elseif ($success): ?>
+        <div class="bg-green-100 border border-green-400 text-green-700 p-4 rounded mb-4">
+          <?= $success ?>
+        </div>
+      <?php endif; ?>
+
+    </div>
+
   </div>
 <body>
 
