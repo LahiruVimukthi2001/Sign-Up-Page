@@ -29,6 +29,35 @@
         </div>
       <?php endif; ?>
 
+       <form method="POST" class="space-y-4">
+        <div>
+          <label class="block text-gray-600 mb-1">Full Name</label>
+          <input name="name" value="<?= htmlspecialchars($_POST['name'] ?? '') ?>" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="text">
+        </div>
+
+        <div>
+          <label class="block text-gray-600 mb-1">Email</label>
+          <input name="email" value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" type="email">
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-1/2">
+            <label class="block text-gray-600 mb-1">Password</label>
+            <input name="password" class="w-full px-4 py-2 border rounded-lg" type="password">
+          </div>
+          <div class="w-1/2">
+            <label class="block text-gray-600 mb-1">Confirm</label>
+            <input name="confirm" class="w-full px-4 py-2 border rounded-lg" type="password">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-gray-600 mb-1">Phone</label>
+          <input name="phone" value="<?= htmlspecialchars($_POST['phone'] ?? '') ?>" class="w-full px-4 py-2 border rounded-lg" type="text">
+        </div>
+
+       </form>
+
     </div>
 
   </div>
