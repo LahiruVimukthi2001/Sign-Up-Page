@@ -56,6 +56,22 @@
           <input name="phone" value="<?= htmlspecialchars($_POST['phone'] ?? '') ?>" class="w-full px-4 py-2 border rounded-lg" type="text">
         </div>
 
+        <div class="flex gap-4">
+          <div class="w-1/2">
+            <label class="block text-gray-600 mb-1">Gender</label>
+            <select name="gender" class="w-full px-4 py-2 border rounded-lg">
+              <option value="">Select</option>
+              <option value="male" <?= ($_POST['gender'] ?? '') === 'male' ? 'selected' : '' ?>>Male</option>
+              <option value="female" <?= ($_POST['gender'] ?? '') === 'female' ? 'selected' : '' ?>>Female</option>
+              <option value="other" <?= ($_POST['gender'] ?? '') === 'other' ? 'selected' : '' ?>>Other</option>
+            </select>
+          </div>
+          <div class="w-1/2">
+            <label class="block text-gray-600 mb-1">Date of Birth</label>
+            <input name="dob" value="<?= htmlspecialchars($_POST['dob'] ?? '') ?>" class="w-full px-4 py-2 border rounded-lg" type="date">
+          </div>
+        </div>
+
        </form>
 
     </div>
