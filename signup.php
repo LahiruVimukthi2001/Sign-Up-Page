@@ -72,7 +72,17 @@
           </div>
         </div>
 
+        <div class="flex items-center gap-2">
+          <input name="agree" type="checkbox" class="w-4 h-4" <?= isset($_POST['agree']) ? 'checked' : '' ?>>
+          <label class="text-sm text-gray-600">I agree to the <a href="#" class="text-blue-600 underline">terms & privacy</a></label>
+        </div>
+
+        <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg font-semibold hover:scale-[1.02] transition-all duration-200">
+          Sign Up
+        </button>
        </form>
+
+       <p class="text-sm text-gray-500 text-center mt-6">Already have an account? <a href="#" class="text-blue-600 underline">Login</a></p>
 
     </div>
 
