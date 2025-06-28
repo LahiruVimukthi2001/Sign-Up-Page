@@ -1,3 +1,32 @@
+<?php
+$errors = [];
+$success = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name     = trim($_POST['name']);
+    $email    = trim($_POST['email']);
+    $password = $_POST['password'];
+    $confirm  = $_POST['confirm'];
+    $phone    = trim($_POST['phone']);
+    $gender   = $_POST['gender'];
+    $dob      = $_POST['dob'];
+    $agree    = isset($_POST['agree']);
+
+    if (empty($name)) $errors[] = "Name is required.";
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Invalid email.";
+    if (strlen($password) < 6) $errors[] = "Password must be at least 6 characters.";
+    if ($password !== $confirm) $errors[] = "Passwords do not match.";
+    if (!preg_match('/^\+?\d{7,15}$/', $phone)) $errors[] = "Invalid phone number.";
+    if (empty($gender)) $errors[] = "Please select a gender.";
+    if (empty($dob)) $errors[] = "Date of birth is required.";
+    if (!$agree) $errors[] = "You must accept the terms.";
+
+    if (empty($errors)) {
+        $success = "🎉 Registration successful!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
