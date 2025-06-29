@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <title>Sign Up</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 min-h-screen flex items-center justify-center font-sans">
+
   <div class="bg-white shadow-xl rounded-3xl w-full max-w-lg p-8 relative overflow-hidden">
 
     <!-- Logo -->
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
       <?php endif; ?>
 
-       <form method="POST" class="space-y-4">
+      <form method="POST" class="space-y-4">
         <div>
           <label class="block text-gray-600 mb-1">Full Name</label>
           <input name="name" value="<?= htmlspecialchars($_POST['name'] ?? '') ?>" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="text">
@@ -109,14 +109,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg font-semibold hover:scale-[1.02] transition-all duration-200">
           Sign Up
         </button>
-       </form>
+      </form>
 
-       <p class="text-sm text-gray-500 text-center mt-6">Already have an account? <a href="#" class="text-blue-600 underline">Login</a></p>
-
+      <p class="text-sm text-gray-500 text-center mt-6">Already have an account? <a href="#" class="text-blue-600 underline">Login</a></p>
     </div>
-
   </div>
-<body>
 
 </body>
 </html>
